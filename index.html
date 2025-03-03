@@ -165,13 +165,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'" />
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
 
-  <!-- Google Tag Manager (gtag.js) - load asynchronously -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'AW-1012608360');
-  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1012608360"></script>
 </head>
 <body class="bg-gray-50 scroll-smooth">
@@ -257,168 +250,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="py-16 bg-gray-50" aria-labelledby="contact-us-heading">
-    <div class="max-w-4xl mx-auto px-4">
-      <div class="bg-white p-8 rounded-lg shadow-lg">
-        <h2 class="text-3xl font-bold text-center mb-8" id="contact-us-heading">Need Immediate Tyre Assistance in Edinburgh? Contact Us Now!</h2>
-        <div class="text-center space-y-4">
-          <p class="text-xl text-gray-600">Call our 24/7 emergency line:</p>
-          <a href="tel:07424903328" class="text-3xl font-bold text-red-600 hover:text-red-700 transition-colors" aria-label="Call our emergency tyre line">
-            07424 903328
-          </a>
-          <p class="text-gray-500">Average response time: Under 45 minutes in Greater Edinburgh area</p>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<!-- Footer -->
-<footer class="bg-gray-900 text-white py-12">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="grid md:grid-cols-3 gap-8">
-      <div>
-        <h3 class="text-xl font-bold mb-4">EdinburghTyres.co.uk</h3>
-        <p class="text-gray-400">Your trusted 24/7 emergency tyre service covering Greater Edinburgh.</p>
-      </div>
-      <div>
-        <h3 class="text-xl font-bold mb-4">Explore</h3>
-        <ul class="space-y-2">
-          <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
-          <li><a href="#why-us" class="text-gray-400 hover:text-white transition-colors">Why Choose Us</a></li>
-          <li><a href="#testimonials" class="text-gray-400 hover:text-white transition-colors">Reviews</a></li>
-          <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-xl font-bold mb-4">Contact Information</h3>
-        <div class="space-y-2 text-gray-400">
-          <p><i class="fas fa-map-marker-alt mr-2"></i>10 Calton Road, Edinburgh EH2 1BP</p>
-          <p><i class="fas fa-phone mr-2"></i><a href="tel:07424903328" class="hover:text-white">07424 903328</a></p>
-          <p><i class="fas fa-envelope mr-2"></i><a href="mailto:info@edinburghtyres.co.uk" class="hover:text-white">info@edinburghtyres.co.uk</a></p>
-        </div>
-      </div>
-    </div>
-    <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-      <p>© 2025 EdinburghTyres.co.uk - 24/7 Emergency Tyre Service Edinburgh | All rights reserved</p>
-    </div>
-  </div>
-</footer>
-
-<!-- Floating CTA Button -->
-<a href="tel:07424903328" class="floating-cta fixed bottom-6 right-6 bg-red-600 text-white p-4 rounded-lg shadow-lg hover:bg-red-700 transition-colors" aria-label="Call for emergency tyre service now">
-  <i class="fas fa-phone-alt text-2xl" aria-hidden="true"></i>
-</a>
-
-<!-- Floating CTA Button -->
-<a href="tel:08003345224" class="floating-cta fixed bottom-6 right-6 bg-red-600 text-white p-4 rounded-lg shadow-lg hover:bg-red-700 transition-colors" aria-label="Call for emergency tyre service now">
-  <i class="fas fa-phone-alt text-2xl" aria-hidden="true"></i>
-</a>
-
-<!-- Optimized JavaScript - Consolidated and deferred -->
-<script defer>
-  // Wait for DOM to be fully loaded
-  document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Menu Functionality
-    const menuButton = document.getElementById('menuButton');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    if (menuButton && mobileMenu) {
-      const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-
-      function toggleMenu(show) {
-        mobileMenu.classList.toggle('hidden', !show);
-        menuButton.setAttribute('aria-expanded', show);
-      }
-
-      menuButton.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
-        toggleMenu(!isExpanded);
-      });
-
-      mobileMenuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          toggleMenu(false);
-        });
-      });
-
-      document.addEventListener('click', (event) => {
-        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
-        if (isExpanded && !mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
-          toggleMenu(false);
-        }
-      });
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
-          toggleMenu(false);
-        }
-      });
-    }
-
-    // FAQ Toggle Functionality
-    document.querySelectorAll('.faq-item').forEach(item => {
-      const question = item.querySelector('.faq-question');
-      if (question) {
-        question.addEventListener('click', () => {
-          item.classList.toggle('active');
-          const isExpanded = item.classList.contains('active');
-          question.setAttribute('aria-expanded', isExpanded);
-        });
-      }
-    });
-
-    // Service Item Toggle
-    document.querySelectorAll('.service-item').forEach(item => {
-      item.addEventListener('click', () => {
-        const details = item.querySelector('.service-details');
-        if (details) {
-          details.classList.toggle('hidden');
-        }
-      });
-    });
-
-    // Floating CTA Visibility on Scroll with debounce
-    let scrollTimer;
-    const floatingCTA = document.querySelector('.floating-cta');
-
-    if (floatingCTA) {
-      function handleScroll() {
-        clearTimeout(scrollTimer);
-        scrollTimer = setTimeout(() => {
-          if (window.scrollY > 100) {
-            floatingCTA.classList.add('visible');
-          } else {
-            floatingCTA.classList.remove('visible');
-          }
-        }, 100);
-      }
-
-      window.addEventListener('scroll', handleScroll, { passive: true });
-      // Initial check
-      handleScroll();
-    }
-
-    // Smooth Scroll for Anchor Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const targetId = this.getAttribute('href');
-        if (targetId !== '#') {
-          e.preventDefault();
-          const target = document.querySelector(targetId);
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-          }
-        }
-      });
-    });
-  });
-</script>
-</body>
-</html>
 
 <!-- Testimonials Section -->
 <section id="testimonials" class="py-16 bg-white" aria-labelledby="customer-reviews-heading">
@@ -640,3 +471,164 @@
       </div>
     </div>
   </div>
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-gray-50" aria-labelledby="contact-us-heading">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h2 class="text-3xl font-bold text-center mb-8" id="contact-us-heading">Need Immediate Tyre Assistance in Edinburgh? Contact Us Now!</h2>
+        <div class="text-center space-y-4">
+          <p class="text-xl text-gray-600">Call our 24/7 emergency line:</p>
+          <a href="tel:07424903328" class="text-3xl font-bold text-red-600 hover:text-red-700 transition-colors" aria-label="Call our emergency tyre line">
+            07424 903328
+          </a>
+          <p class="text-gray-500">Average response time: Under 45 minutes in Greater Edinburgh area</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-xl font-bold mb-4">EdinburghTyres.co.uk</h3>
+        <p class="text-gray-400">Your trusted 24/7 emergency tyre service covering Greater Edinburgh.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-4">Explore</h3>
+        <ul class="space-y-2">
+          <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+          <li><a href="#why-us" class="text-gray-400 hover:text-white transition-colors">Why Choose Us</a></li>
+          <li><a href="#testimonials" class="text-gray-400 hover:text-white transition-colors">Reviews</a></li>
+          <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-4">Contact Information</h3>
+        <div class="space-y-2 text-gray-400">
+          <p><i class="fas fa-map-marker-alt mr-2"></i>10 Calton Road, Edinburgh EH2 1BP</p>
+          <p><i class="fas fa-phone mr-2"></i><a href="tel:07424903328" class="hover:text-white">07424 903328</a></p>
+          <p><i class="fas fa-envelope mr-2"></i><a href="mailto:info@edinburghtyres.co.uk" class="hover:text-white">info@edinburghtyres.co.uk</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+      <p>© 2025 EdinburghTyres.co.uk - 24/7 Emergency Tyre Service Edinburgh | All rights reserved</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating CTA Button -->
+<a href="tel:07424903328" class="floating-cta fixed bottom-6 right-6 bg-red-600 text-white p-4 rounded-lg shadow-lg hover:bg-red-700 transition-colors" aria-label="Call for emergency tyre service now">
+  <i class="fas fa-phone-alt text-2xl" aria-hidden="true"></i>
+</a>
+
+<!-- Floating CTA Button -->
+<a href="tel:08003345224" class="floating-cta fixed bottom-6 right-6 bg-red-600 text-white p-4 rounded-lg shadow-lg hover:bg-red-700 transition-colors" aria-label="Call for emergency tyre service now">
+  <i class="fas fa-phone-alt text-2xl" aria-hidden="true"></i>
+</a>
+
+<!-- Optimized JavaScript - Consolidated and deferred -->
+<script defer>
+  // Wait for DOM to be fully loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Functionality
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (menuButton && mobileMenu) {
+      const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+      function toggleMenu(show) {
+        mobileMenu.classList.toggle('hidden', !show);
+        menuButton.setAttribute('aria-expanded', show);
+      }
+
+      menuButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        toggleMenu(!isExpanded);
+      });
+
+      mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          toggleMenu(false);
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        if (isExpanded && !mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
+          toggleMenu(false);
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+          toggleMenu(false);
+        }
+      });
+    }
+
+    // FAQ Toggle Functionality
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const question = item.querySelector('.faq-question');
+      if (question) {
+        question.addEventListener('click', () => {
+          item.classList.toggle('active');
+          const isExpanded = item.classList.contains('active');
+          question.setAttribute('aria-expanded', isExpanded);
+        });
+      }
+    });
+
+    // Service Item Toggle
+    document.querySelectorAll('.service-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const details = item.querySelector('.service-details');
+        if (details) {
+          details.classList.toggle('hidden');
+        }
+      });
+    });
+
+    // Floating CTA Visibility on Scroll with debounce
+    let scrollTimer;
+    const floatingCTA = document.querySelector('.floating-cta');
+
+    if (floatingCTA) {
+      function handleScroll() {
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(() => {
+          if (window.scrollY > 100) {
+            floatingCTA.classList.add('visible');
+          } else {
+            floatingCTA.classList.remove('visible');
+          }
+        }, 100);
+      }
+
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      // Initial check
+      handleScroll();
+    }
+
+    // Smooth Scroll for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId !== '#') {
+          e.preventDefault();
+          const target = document.querySelector(targetId);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
