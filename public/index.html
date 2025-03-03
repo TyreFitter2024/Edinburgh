@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>24/7 Emergency Tyre Service Edinburgh | Mobile Tyre Fitting & Repair</title>
+  <meta name="description" content="Need Mobile Tyre Fitting in Edinburgh? EdinburghTyres.com offers 24/7 mobile tyre fitting and puncture repair with a 45-minute response time. RAC approved and reliable." />
+  <link rel="canonical" href="https://www.edinburghtyres.co.uk/" />
+
+  <!-- Structured Data (Schema Markup) for Local Business -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Edinburgh Tyres",
+      "image": "/img/2.jpg",
+      "@id": "https://www.edinburghtyres.co.uk/",
+      "url": "https://www.edinburghtyres.co.uk/",
+      "telephone": "08003345224",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "48 West George Street, Edinburgh.",
+        "addressLocality": "Edinburgh",
+        "addressRegion": "Edinburgh",
+        "postalCode": "EH1 2JE",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 55.9533,
+        "longitude": -3.1883
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "sameAs" : [
+        "YOUR_FACEBOOK_PAGE_URL",
+        "YOUR_TWITTER_URL",
+        "YOUR_INSTAGRAM_URL"
+      ],
+      "description": "24/7 Mobile Tyre Fitting in Edinburgh. Mobile Tyre Fitting, Puncture Repair, and TPMS Services. RAC Approved with a 45-minute response time.",
+      "areaServed": "Edinburgh and surrounding areas",
+      "serviceArea": "Greater Edinburgh",
+      "keywords": "emergency tyre service Edinburgh, mobile tyre fitting Edinburgh, 24/7 tyre service, puncture repair Edinburgh, RAC approved tyre service"
+    }
+  </script>
+
+  <!-- Preload critical assets -->
+  <link rel="preload" href="img/1.jpg" as="image" fetchpriority="high" />
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" />
+  <link rel="preload" href="https://cdn.tailwindcss.com" as="script" />
+
+  <!-- Inline critical CSS to eliminate render-blocking -->
+  <style>
+    /* Critical styles */
+    .bg-red-600 { background-color: #dc2626; }
+    .text-white { color: #ffffff; }
+    .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+    .px-4 { padding-left: 1rem; padding-right: 1rem; }
+    .text-center { text-align: center; }
+    .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+    .font-bold { font-weight: 700; }
+    .inline-flex { display: inline-flex; }
+    .items-center { align-items: center; }
+    .justify-center { justify-content: center; }
+    .mr-2 { margin-right: 0.5rem; }
+    .sticky { position: sticky; }
+    .top-0 { top: 0; }
+    .z-50 { z-index: 50; }
+    .bg-white { background-color: #ffffff; }
+    .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+    .relative { position: relative; }
+    .max-w-6xl { max-width: 72rem; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+    .flex { display: flex; }
+    .h-16 { height: 4rem; }
+    .flex-shrink-0 { flex-shrink: 0; }
+    .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+    .text-gray-800 { color: #1f2937; }
+    .hidden { display: none; }
+    .md\:flex { display: flex; }
+    .text-gray-600 { color: #4b5563; }
+    .md\:space-x-8 > * + * { margin-left: 2rem; }
+    .md\:hidden { display: none; }
+    .p-2 { padding: 0.5rem; }
+    .rounded-md { border-radius: 0.375rem; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
+
+    /* Hero Section Background */
+    .hero-section {
+      background-image: url('img/1.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Floating CTA Button */
+    .floating-cta {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+      pointer-events: none;
+    }
+    .floating-cta.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+
+    /* Mobile Menu Panel */
+    #mobileMenu.show { display: block; }
+
+    .scroll-smooth { scroll-behavior: smooth; }
+
+    /* Avatar Styles */
+    .avatar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #9CA3AF;
+      color: #FFFFFF;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    /* FAQ Styles */
+    .faq-question {
+      font-weight: bold;
+      font-size: 1.125rem;
+      cursor: pointer;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    .faq-answer {
+      color: #4B5563;
+      padding-bottom: 1rem;
+      display: none;
+    }
+    .faq-item.active .faq-answer { display: block; }
+    .faq-item.active .faq-question i { transform: rotate(180deg); }
+    .faq-question i {
+      display: inline-block;
+      margin-left: 0.5rem;
+      transition: transform 0.2s;
+    }
+  </style>
+
+  <!-- Tailwind CSS (defer loading) -->
+  <script src="https://cdn.tailwindcss.com" defer></script>
+
+  <!-- Font Awesome (with async loading) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+
+  <!-- Google Tag Manager (gtag.js) - load asynchronously -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-1012608360');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1012608360"></script>
+</head>
+<body class="bg-gray-50 scroll-smooth">
+<!-- Emergency Bar -->
+<div class="bg-red-600 text-white py-2 px-4 text-center" role="banner">
+  <a href="tel:08003345224" class="text-lg font-bold hover:text-gray-200 inline-flex items-center justify-center" aria-label="Call us for emergency tyre service">
+    <i class="fas fa-truck mr-2" aria-hidden="true"></i>
+    <i class="fas fa-phone-alt mr-2" aria-hidden="true"></i>
+    <span>Emergency? Call 0800 334 5224</span>
+  </a>
+</div>
+
+<!-- Navigation -->
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+  <nav class="relative max-w-6xl mx-auto px-4" role="navigation">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="/" class="text-xl font-bold text-gray-800 hover:text-blue-600 transition-colors" aria-label="Go to Edinburgh Tyres Homepage">
+          EdinburghTyres.co.uk
+        </a>
+      </div>
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex md:items-center md:space-x-8">
+        <a href="#services" class="text-gray-600 hover:text-blue-600 transition-colors">Services</a>
+        <a href="#why-us" class="text-gray-600 hover:text-blue-600 transition-colors">Why Us</a>
+        <a href="#testimonials" class="text-gray-600 hover:text-blue-600 transition-colors">Reviews</a>
+        <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+      </div>
+      <!-- Mobile Menu Button -->
+      <button type="button" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false" id="menuButton">
+        <span class="sr-only">Open main menu</span>
+        <i class="fas fa-bars text-xl" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobileMenu" class="hidden md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg border-t" role="menu" aria-orientation="vertical" aria-labelledby="menuButton">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50" role="menuitem">Services</a>
+        <a href="#why-us" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50" role="menuitem">Why Us</a>
+        <a href="#testimonials" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50" role="menuitem">Reviews</a>
+        <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50" role="menuitem">Contact</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<main>
+  <section class="hero-section relative min-h-[75vh]" aria-label="Mobile Tyre Fitting in Edinburgh">
+    <div class="absolute inset-0 bg-black opacity-50" aria-hidden="true"></div>
+    <div class="relative bg-gradient-to-b from-blue-900/70 to-black/70 text-white py-12 min-h-[75vh] flex items-center">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <div class="mb-6">
+          <a href="tel:08003345224" class="text-3xl md:text-4xl font-bold bg-red-600 inline-block py-3 px-6 rounded-lg hover:bg-red-700 transition-colors" aria-label="Call us now for emergency tyre service">
+            <i class="fas fa-phone-alt mr-2" aria-hidden="true"></i>
+            0800 334 5224
+          </a>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+          Mobile Tyre Fitting in Edinburgh <br />
+          <span class="text-2xl md:text-4xl">Under 45 Minutes Response</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-6">
+          <i class="fas fa-shield-alt text-green-400 mr-2" aria-hidden="true"></i>RAC Approved 24/7 Mobile Tyre Service
+        </p>
+        <div class="space-y-4">
+          <a href="#contact" class="inline-block bg-blue-600 text-white font-bold py-4 px-8 rounded-lg text-xl hover:bg-blue-700 transition-colors" aria-label="Get emergency tyre help now">
+            <i class="fas fa-wrench mr-2" aria-hidden="true"></i>Get Help Now
+          </a>
+          <div class="mt-4">
+            <div class="flex items-center justify-center space-x-1">
+              <i class="fas fa-star text-yellow-400" aria-hidden="true"></i>
+              <i class="fas fa-star text-yellow-400" aria-hidden="true"></i>
+              <i class="fas fa-star text-yellow-400" aria-hidden="true"></i>
+              <i class="fas fa-star text-yellow-400" aria-hidden="true"></i>
+              <i class="fas fa-star-half-alt text-yellow-400" aria-hidden="true"></i>
+              <span class="ml-2 text-white">4.9/5.0 (200+ Reviews)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-gray-50" aria-labelledby="contact-us-heading">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h2 class="text-3xl font-bold text-center mb-8" id="contact-us-heading">Need Immediate Tyre Assistance in Edinburgh? Contact Us Now!</h2>
+        <div class="text-center space-y-4">
+          <p class="text-xl text-gray-600">Call our 24/7 emergency line:</p>
+          <a href="tel:08003345224" class="text-3xl font-bold text-red-600 hover:text-red-700 transition-colors" aria-label="Call our emergency tyre line">
+            0800 334 5224
+          </a>
+          <p class="text-gray-500">Average response time: Under 45 minutes in Greater Edinburgh area</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Floating CTA Button -->
+<a href="tel:08003345224" class="floating-cta fixed bottom-6 right-6 bg-red-600 text-white p-4 rounded-lg shadow-lg hover:bg-red-700 transition-colors" aria-label="Call for emergency tyre service now">
+  <i class="fas fa-phone-alt text-2xl" aria-hidden="true"></i>
+</a>
+
+<!-- Floating CTA Button -->
+<a href="tel:08003345224" class="floating-cta fixed bottom-6 right-6 bg-red-600 text-white p-4 rounded-lg shadow-lg hover:bg-red-700 transition-colors" aria-label="Call for emergency tyre service now">
+  <i class="fas fa-phone-alt text-2xl" aria-hidden="true"></i>
+</a>
+
+<!-- Optimized JavaScript - Consolidated and deferred -->
+<script defer>
+  // Wait for DOM to be fully loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Functionality
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (menuButton && mobileMenu) {
+      const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+      function toggleMenu(show) {
+        mobileMenu.classList.toggle('hidden', !show);
+        menuButton.setAttribute('aria-expanded', show);
+      }
+
+      menuButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        toggleMenu(!isExpanded);
+      });
+
+      mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          toggleMenu(false);
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        if (isExpanded && !mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
+          toggleMenu(false);
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+          toggleMenu(false);
+        }
+      });
+    }
+
+    // FAQ Toggle Functionality
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const question = item.querySelector('.faq-question');
+      if (question) {
+        question.addEventListener('click', () => {
+          item.classList.toggle('active');
+          const isExpanded = item.classList.contains('active');
+          question.setAttribute('aria-expanded', isExpanded);
+        });
+      }
+    });
+
+    // Service Item Toggle
+    document.querySelectorAll('.service-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const details = item.querySelector('.service-details');
+        if (details) {
+          details.classList.toggle('hidden');
+        }
+      });
+    });
+
+    // Floating CTA Visibility on Scroll with debounce
+    let scrollTimer;
+    const floatingCTA = document.querySelector('.floating-cta');
+
+    if (floatingCTA) {
+      function handleScroll() {
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(() => {
+          if (window.scrollY > 100) {
+            floatingCTA.classList.add('visible');
+          } else {
+            floatingCTA.classList.remove('visible');
+          }
+        }, 100);
+      }
+
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      // Initial check
+      handleScroll();
+    }
+
+    // Smooth Scroll for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId !== '#') {
+          e.preventDefault();
+          const target = document.querySelector(targetId);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-16 bg-white" aria-labelledby="customer-reviews-heading">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12" id="customer-reviews-heading">What Our Customers Say About Our Tyre Service</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+        <div class="flex items-center space-x-4 mb-4">
+          <div class="avatar bg-yellow-500">S</div>
+          <div>
+            <div class="flex justify-start mb-1">
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+            </div>
+            <div class="font-bold">Sarah M.</div>
+            <div class="text-sm text-gray-500">Edinburgh City Centre</div>
+          </div>
+        </div>
+        <p class="mb-4 text-gray-600">"Fantastic emergency service! They arrived within 40 minutes when I was stranded with a flat tyre on A1. Highly recommend Edinburgh Tyres!"</p>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+        <div class="flex items-center space-x-4 mb-4">
+          <div class="avatar bg-green-500">J</div>
+          <div>
+            <div class="flex justify-start mb-1">
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+            </div>
+            <div class="font-bold">John D.</div>
+            <div class="text-sm text-gray-500">Leith</div>
+          </div>
+        </div>
+        <p class="mb-4 text-gray-600">"Professional and quick service. Fair prices and great communication throughout my emergency tyre repair. Will definitely use Edinburgh Tyres again."</p>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+        <div class="flex items-center space-x-4 mb-4">
+          <div class="avatar bg-blue-500">D</div>
+          <div>
+            <div class="flex justify-start mb-1">
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+            </div>
+            <div class="font-bold">David R.</div>
+            <div class="text-sm text-gray-500">Stockbridge</div>
+          </div>
+        </div>
+        <p class="mb-4 text-gray-600">"Lifesavers! Called Edinburgh Tyres at 2 AM with a blow-out, and they were there in 35 minutes. Amazing 24/7 service!"</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="py-16 bg-[#7D7D7D]" aria-labelledby="faq-heading">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-8 text-white" id="faq-heading">Frequently Asked Questions</h2>
+    <p class="text-center text-gray-200 mb-12 text-lg">Your road to clarity starts here. Find answers to the most pressing questions about our emergency tyre services.</p>
+    <img src="img/faq.png" alt="FAQ Image" class="w-auto max-w-xs mx-auto mb-12 rounded-lg shadow-md" width="250" height="180" loading="lazy" />
+    <div class="space-y-4">
+      <div class="faq-item bg-white p-6 rounded-lg shadow-sm transition-all duration-200">
+        <h3 class="faq-question flex justify-between items-center" tabindex="0">
+                      <span class="flex items-center gap-2">
+                        <i class="fas fa-map-marker-alt text-gray-600"></i>
+                        Where in Edinburgh do you provide emergency tyre services?
+                      </span>
+          <i class="fas fa-chevron-down text-gray-600"></i>
+        </h3>
+        <div class="faq-answer mt-4">
+          From the bustling streets of Edinburgh City Centre to the serene corners of Stockbridge, Leith, Morningside, and Portobello—we're there. Unsure if we cover your area? Call us at 0800 334 5224 and we'll confirm in seconds.
+        </div>
+      </div>
+      <div class="faq-item bg-white p-6 rounded-lg shadow-sm transition-all duration-200">
+        <h3 class="faq-question flex justify-between items-center" tabindex="0">
+                      <span class="flex items-center gap-2">
+                        <i class="fas fa-stopwatch text-gray-600"></i>
+                        How fast can you reach me in an emergency?
+                      </span>
+          <i class="fas fa-chevron-down text-gray-600"></i>
+        </h3>
+        <div class="faq-answer mt-4">
+          We pride ourselves on speed. On average, we're at your location in under 45 minutes across Greater Edinburgh. Traffic may vary, but our commitment to getting you back on the road doesn't.
+        </div>
+      </div>
+      <div class="faq-item bg-white p-6 rounded-lg shadow-sm transition-all duration-200">
+        <h3 class="faq-question flex justify-between items-center" tabindex="0">
+                      <span class="flex items-center gap-2">
+                        <i class="fas fa-user-shield text-gray-600"></i>
+                        Are your tyre technicians certified?
+                      </span>
+          <i class="fas fa-chevron-down text-gray-600"></i>
+        </h3>
+        <div class="faq-answer mt-4">
+          Absolutely. Every technician is RAC approved, fully qualified, and trained to the highest standards. When we're fixing your tyre, you're in the safest hands.
+        </div>
+      </div>
+      <div class="faq-item bg-white p-6 rounded-lg shadow-sm transition-all duration-200">
+        <h3 class="faq-question flex justify-between items-center" tabindex="0">
+                      <span class="flex items-center gap-2">
+                        <i class="fas fa-car text-gray-600"></i>
+                        What vehicles do you service?
+                      </span>
+          <i class="fas fa-chevron-down text-gray-600"></i>
+        </h3>
+        <div class="faq-answer mt-4">
+          Cars, vans, SUVs, and light commercial vehicles—we've got them covered. If you're unsure about your vehicle, give us a call. We'll confirm in a heartbeat.
+        </div>
+      </div>
+      <div class="faq-item bg-white p-6 rounded-lg shadow-sm transition-all duration-200">
+        <h3 class="faq-question flex justify-between items-center" tabindex="0">
+                      <span class="flex items-center gap-2">
+                        <i class="fas fa-tools text-gray-600"></i>
+                        What other services do you offer?
+                      </span>
+          <i class="fas fa-chevron-down text-gray-600"></i>
+        </h3>
+        <div class="faq-answer mt-4">
+          Beyond emergency tyre fitting, we provide puncture repairs, TPMS services, wheel balancing, and valve replacements. Think of us as your one-stop solution for all tyre needs.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-16 bg-white" aria-labelledby="services-heading">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12" id="services-heading">Our Emergency Tyre Services</h2>
+    <p class="text-center text-gray-600 mb-12 text-lg">When you're stranded, we're there. Our expert tyre services are designed to get you back on the road—fast, safe, and stress-free.</p>
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <!-- Image -->
+      <div class="rounded-lg overflow-hidden shadow-lg">
+        <img src="img/2.jpg" alt="Mobile tyre fitting service for emergency tyre replacements in Edinburgh" class="w-full h-64 object-cover" width="600" height="256" loading="lazy" />
+      </div>
+      <!-- Services List -->
+      <div class="space-y-8">
+        <div class="service-item cursor-pointer bg-gray-50 p-6 rounded-lg hover:shadow-md transition-shadow">
+          <div class="flex items-start space-x-4">
+            <div class="text-blue-600 text-2xl mt-1">
+              <i class="fas fa-truck-moving fa-fw" aria-hidden="true"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Mobile Tyre Fitting in Edinburgh</h3>
+              <p class="text-gray-600">24/7 professional mobile tyre fitting delivered directly to your location in Edinburgh.</p>
+            </div>
+          </div>
+          <div class="service-details mt-4 hidden text-gray-600">
+            <p>Whether it's a flat tyre in Edinburgh City Centre or a blowout in the suburbs, our mobile tyre fitting service is there when you need it most. We stock a wide range of tyres for all vehicles, ensuring you get the perfect fit—every time.</p>
+          </div>
+        </div>
+        <div class="service-item cursor-pointer bg-gray-50 p-6 rounded-lg hover:shadow-md transition-shadow">
+          <div class="flex items-start space-x-4">
+            <div class="text-blue-600 text-2xl mt-1">
+              <i class="fas fa-wrench fa-fw" aria-hidden="true"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Emergency Puncture Repair</h3>
+              <p class="text-gray-600">Fast and reliable puncture repairs carried out to British Standards.</p>
+            </div>
+          </div>
+          <div class="service-details mt-4 hidden text-gray-600">
+            <p>Don't let a puncture ruin your day. Our skilled technicians use state-of-the-art tools to repair your tyre quickly and safely, following strict British Standards. We'll get you back on the road in no time.</p>
+          </div>
+        </div>
+        <div class="service-item cursor-pointer bg-gray-50 p-6 rounded-lg hover:shadow-md transition-shadow">
+          <div class="flex items-start space-x-4">
+            <div class="text-blue-600 text-2xl mt-1">
+              <i class="fas fa-tachometer-alt fa-fw" aria-hidden="true"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Tyre Pressure Monitoring System (TPMS) Services</h3>
+              <p class="text-gray-600">Expert diagnosis, repair, and replacement of tyre pressure monitoring systems.</p>
+            </div>
+          </div>
+          <div class="service-details mt-4 hidden text-gray-600">
+            <p>Your TPMS keeps you safe by monitoring tyre pressure in real-time. If it's malfunctioning, we'll diagnose the issue, repair it, or replace it with a new system. Your safety is our top priority.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section id="why-us" class="py-16 bg-gray-50" aria-labelledby="why-choose-us-heading">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div class="order-2 md:order-1">
+        <h2 class="text-3xl font-bold mb-8" id="why-choose-us-heading">Why Choose Edinburgh Tyres for Emergency Tyre Service?</h2>
+        <div class="grid grid-cols-2 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+            <i class="fas fa-award text-blue-600 text-3xl mb-3" aria-hidden="true"></i>
+            <h3 class="font-bold">RAC Approved Tyre Technicians</h3>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+            <i class="fas fa-clock text-blue-600 text-3xl mb-3" aria-hidden="true"></i>
+            <h3 class="font-bold">Fast 45-Minute Response Time</h3>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+            <i class="fas fa-certificate text-blue-600 text-3xl mb-3" aria-hidden="true"></i>
+            <h3 class="font-bold">NTDA (National Tyre Distributors Association) Member</h3>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+            <i class="fas fa-check-circle text-blue-600 text-3xl mb-3" aria-hidden="true"></i>
+            <h3 class="font-bold">Available 24 Hours a Day, 7 Days a Week</h3>
+          </div>
+        </div>
+      </div>
+      <div class="order-1 md:order-2">
+        <img src="img/3.jpg" alt="Professional and reliable tyre service in Edinburgh with expert technicians" class="rounded-lg shadow-lg w-full" width="600" height="400" loading="lazy" />
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">EdinburghTyres.co.uk</h3>
+          <p class="text-gray-400">Your trusted 24/7 emergency tyre service covering Greater Edinburgh.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Explore</h3>
+          <ul class="space-y-2">
+            <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+            <li><a href="#why-us" class="text-gray-400 hover:text-white transition-colors">Why Choose Us</a></li>
+            <li><a href="#testimonials" class="text-gray-400 hover:text-white transition-colors">Reviews</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Contact Information</h3>
+          <div class="space-y-2 text-gray-400">
+            <p><i class="fas fa-map-marker-alt mr-2"></i>48 West George Street, Edinburgh EH2 1BP</p>
+            <p><i class="fas fa-phone mr-2"></i><a href="tel:08003345224" class="hover:text-white">0800 334 5224</a></p>
+            <p><i class="fas fa-envelope mr-2"></i><a href="mailto:info@edinburghtyres.co.uk" class="hover:text-white">info@edinburghtyres.co.uk</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p>© 2025 EdinburghTyres.co.uk - 24/7 Emergency Tyre Service Edinburgh | All rights reserved</p>
+      </div>
+    </div>
+  </footer>
