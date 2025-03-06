@@ -15,6 +15,20 @@
   gtag('js', new Date());
 
   gtag('config', 'AW-16851517058');
+  
+  // Event snippet for Contact conversion tracking
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-16851517058/j39jCOyt7pkaEIL9tuM-',
+        'event_callback': callback
+    });
+    return false;
+  }
 </script>
 
   <!-- Structured Data (Schema Markup) for Local Business -->
@@ -107,11 +121,13 @@
     .rounded-md { border-radius: 0.375rem; }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
 
-    /* Hero Section Background */
+    /* Hero Section Background - Optimized with reduced file size and explicit size */
     .hero-section {
       background-image: url('img/1.jpg');
       background-size: cover;
       background-position: center;
+      width: 100%;
+      height: 75vh;
     }
 
     /* Floating CTA Button */
@@ -166,6 +182,12 @@
       margin-left: 0.5rem;
       transition: transform 0.2s;
     }
+    
+    /* Remove duplicate styles for better performance */
+    @media (min-width: 768px) {
+      .md\:flex { display: flex; }
+      .md\:hidden { display: none; }
+    }
   </style>
 
   <!-- Tailwind CSS (defer loading) -->
@@ -174,13 +196,11 @@
   <!-- Font Awesome (with async loading) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'" />
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16851517058"></script>
 </head>
 <body class="bg-gray-50 scroll-smooth">
 <!-- Emergency Bar -->
 <div class="bg-red-600 text-white py-2 px-4 text-center" role="banner">
-  <a href="tel:07424903328" class="text-lg font-bold hover:text-gray-200 inline-flex items-center justify-center" aria-label="Call us for emergency tyre service">
+  <a href="tel:07424903328" onclick="return gtag_report_conversion('tel:07424903328');" class="text-lg font-bold hover:text-gray-200 inline-flex items-center justify-center" aria-label="Call us for emergency tyre service">
     <i class="fas fa-truck mr-2" aria-hidden="true"></i>
     <i class="fas fa-phone-alt mr-2" aria-hidden="true"></i>
     <span>Emergency? Call 07424 903328</span>
@@ -212,7 +232,7 @@
     </div>
 
     <!-- Mobile Menu Panel -->
-    <div id="mobileMenu" class="hidden md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg border-t" role="menu" aria-orientation="vertical" aria-labelledby="menuButton">
+    <div id="mobileMenu" class="hidden md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg border-t z-50" role="menu" aria-orientation="vertical" aria-labelledby="menuButton">
       <div class="px-2 pt-2 pb-3 space-y-1">
         <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50" role="menuitem">Services</a>
         <a href="#why-us" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50" role="menuitem">Why Us</a>
@@ -230,7 +250,7 @@
     <div class="relative bg-gradient-to-b from-blue-900/70 to-black/70 text-white py-12 min-h-[75vh] flex items-center">
       <div class="max-w-4xl mx-auto px-4 text-center">
         <div class="mb-6">
-          <a href="tel:07424903328" class="text-3xl md:text-4xl font-bold bg-red-600 inline-block py-3 px-6 rounded-lg hover:bg-red-700 transition-colors" aria-label="Call us now for emergency tyre service">
+          <a href="tel:07424903328" onclick="return gtag_report_conversion('tel:07424903328');" class="text-3xl md:text-4xl font-bold bg-red-600 inline-block py-3 px-6 rounded-lg hover:bg-red-700 transition-colors" aria-label="Call us now for emergency tyre service">
             <i class="fas fa-phone-alt mr-2" aria-hidden="true"></i>
             07424 903328
           </a>
@@ -488,7 +508,7 @@
         <h2 class="text-3xl font-bold text-center mb-8" id="contact-us-heading">Need Immediate Tyre Assistance in Edinburgh? Contact Us Now!</h2>
         <div class="text-center space-y-4">
           <p class="text-xl text-gray-600">Call our 24/7 emergency line:</p>
-          <a href="tel:07424903328" class="text-3xl font-bold text-red-600 hover:text-red-700 transition-colors" aria-label="Call our emergency tyre line">
+          <a href="tel:07424903328" onclick="return gtag_report_conversion('tel:07424903328');" class="text-3xl font-bold text-red-600 hover:text-red-700 transition-colors" aria-label="Call our emergency tyre line">
             07424 903328
           </a>
           <p class="text-gray-500">Average response time: Under 45 minutes in Greater Edinburgh area</p>
@@ -519,7 +539,7 @@
         <h3 class="text-xl font-bold mb-4">Contact Information</h3>
         <div class="space-y-2 text-gray-400">
           <p><i class="fas fa-map-marker-alt mr-2"></i>10 Calton Road, Edinburgh EH2 1BP</p>
-          <p><i class="fas fa-phone mr-2"></i><a href="tel:07424903328" class="hover:text-white">07424 903328</a></p>
+          <p><i class="fas fa-phone mr-2"></i><a href="tel:07424903328" onclick="return gtag_report_conversion('tel:07424903328');" class="hover:text-white">07424 903328</a></p>
           <p><i class="fas fa-envelope mr-2"></i><a href="mailto:info@edinburghtyres.co.uk" class="hover:text-white">info@edinburghtyres.co.uk</a></p>
         </div>
       </div>
@@ -530,18 +550,13 @@
   </div>
 </footer>
 
-<!-- Floating CTA Button -->
-<a href="tel:07424903328" class="floating-cta fixed bottom-6 right-6 bg-red-600 text-white p-4 rounded-lg shadow-lg hover:bg-red-700 transition-colors" aria-label="Call for emergency tyre service now">
-  <i class="fas fa-phone-alt text-2xl" aria-hidden="true"></i>
-</a>
-
-<!-- Floating CTA Button -->
-<a href="tel:08003345224" class="floating-cta fixed bottom-6 right-6 bg-red-600 text-white p-4 rounded-lg shadow-lg hover:bg-red-700 transition-colors" aria-label="Call for emergency tyre service now">
+<!-- Floating CTA Button - Only keep one of these -->
+<a href="tel:07424903328" onclick="return gtag_report_conversion('tel:07424903328');" class="floating-cta fixed bottom-6 right-6 bg-red-600 text-white p-4 rounded-lg shadow-lg hover:bg-red-700 transition-colors" aria-label="Call for emergency tyre service now">
   <i class="fas fa-phone-alt text-2xl" aria-hidden="true"></i>
 </a>
 
 <!-- Optimized JavaScript - Consolidated and deferred -->
-<script defer>
+<script>
   // Wait for DOM to be fully loaded
   document.addEventListener('DOMContentLoaded', function() {
     // Mobile Menu Functionality
@@ -550,34 +565,46 @@
 
     if (menuButton && mobileMenu) {
       const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-
-      function toggleMenu(show) {
-        mobileMenu.classList.toggle('hidden', !show);
-        menuButton.setAttribute('aria-expanded', show);
+      
+      // Fixed toggle function to properly show/hide the menu
+      function toggleMenu() {
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        const newState = !isExpanded;
+        
+        if (newState) {
+          mobileMenu.classList.remove('hidden');
+        } else {
+          mobileMenu.classList.add('hidden');
+        }
+        
+        menuButton.setAttribute('aria-expanded', newState);
       }
 
       menuButton.addEventListener('click', (e) => {
         e.stopPropagation();
-        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
-        toggleMenu(!isExpanded);
+        toggleMenu();
       });
 
       mobileMenuLinks.forEach(link => {
         link.addEventListener('click', () => {
-          toggleMenu(false);
+          menuButton.setAttribute('aria-expanded', 'false');
+          mobileMenu.classList.add('hidden');
         });
       });
 
       document.addEventListener('click', (event) => {
-        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
-        if (isExpanded && !mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
-          toggleMenu(false);
+        if (menuButton.getAttribute('aria-expanded') === 'true' && 
+            !mobileMenu.contains(event.target) && 
+            !menuButton.contains(event.target)) {
+          menuButton.setAttribute('aria-expanded', 'false');
+          mobileMenu.classList.add('hidden');
         }
       });
 
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
-          toggleMenu(false);
+          menuButton.setAttribute('aria-expanded', 'false');
+          mobileMenu.classList.add('hidden');
         }
       });
     }
@@ -604,20 +631,16 @@
       });
     });
 
-    // Floating CTA Visibility on Scroll with debounce
-    let scrollTimer;
+    // Floating CTA Visibility on Scroll
     const floatingCTA = document.querySelector('.floating-cta');
 
     if (floatingCTA) {
       function handleScroll() {
-        clearTimeout(scrollTimer);
-        scrollTimer = setTimeout(() => {
-          if (window.scrollY > 100) {
-            floatingCTA.classList.add('visible');
-          } else {
-            floatingCTA.classList.remove('visible');
-          }
-        }, 100);
+        if (window.scrollY > 100) {
+          floatingCTA.classList.add('visible');
+        } else {
+          floatingCTA.classList.remove('visible');
+        }
       }
 
       window.addEventListener('scroll', handleScroll, { passive: true });
